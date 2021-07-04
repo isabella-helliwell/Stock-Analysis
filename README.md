@@ -27,7 +27,7 @@ Table2. Yearly return for year 2018
 
 
 ### 1.2 VBA Code
-      The overal layout of the VBA code consists of a suberoutine name, and a collection of steps and instructions.
+      The overal layout of the VBA code consists of a subroutine name, and a collection of steps and instructions.
       The name of the Subroutine is set to "VBA_Challenge", and the instructions given is to calculate the yearly return for stocks.
       In the first part of the macro, variable declarations are made to assign the correct data types.
       In the main part of the macro, the actual calculations are carried out utilizing nested foor loops.
@@ -51,7 +51,7 @@ The following code is used for the first part of the macro:
       -MessageBox will ask the user to input year for the Stocks to be analysed and will assign yearvalue the input
       
 ##### RowCount = Sheets(yearvalue).Cells(Rows.Count, "A").End(xlUp).Row
-      - RowCount will open up the Excel tab with the same year as the user year input and select column A,
+      - RowCount will open up the Excel tab with the same year as the user year input and select column A,go to the end of column A,
         and scroll up to the first row with a non blank cell in column A. This will provided how many Rows there is in the sheet opened.
         
 ##### starttimer = Timer
