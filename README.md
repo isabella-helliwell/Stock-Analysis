@@ -220,7 +220,8 @@ The Refactored code can be found in "VBA_Challenge_Refactored.txt" file.
 
       ![image](https://user-images.githubusercontent.com/85843030/124392869-acc21280-dcc5-11eb-8a71-8542ee310cb4.png)
 
-      
+      ![image](https://user-images.githubusercontent.com/85843030/124392919-f14dae00-dcc5-11eb-92fd-2c0352e28c5c.png)
+
 
 
 
