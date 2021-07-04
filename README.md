@@ -2,12 +2,13 @@
 
 ## 1. Project Scope
       Part1:
-      The scope of this project is to compare the stockmarket for predefined stocks for years 2017 and 2018
-      writing a VBA macro in Excel.
-      Part 2:
-      The second part of this project is to optimize the VBA code and Runtime
+      -The scope of this project is to compare the stockmarket for predefined stocks for years 2017 and 2018
+      using VBA script in Excel.
       
-### 1.1 Stockmarket Analysis and Results
+      Part2
+      -The second part of this project is to optimize the VBA code and Runtime where possible.
+      
+### 1.1 Stockmarket Analysis 
       The analysis are based on obtaining the yearly return for the predefined stocks.
       The formula used is (endingPrice / startingPrice - 1) for each year and stock.
       Results are shown in Table 1 and Table 2.
@@ -176,7 +177,7 @@ The next part of the code is to format the cells. This is done using the followi
 
 ##### End Sub
 
-### 1.2.2 VBA Code Refactored
+### 1.3 VBA Code Refactored
       The purpose of this excersise is to see if we can optimized the running time in the VBA macro that was described in section 1.2.1.
       At first we can look into our VBA code to see if we can make it more clear and clean. Secondly, there might be some other operators,
       logical statements that will collect less memory, and therefore optimize the run time.
@@ -222,16 +223,37 @@ The Refactored code can be found in "VBA_Challenge_Refactored.txt" file.
  
  
  
-      After some minor modification to the VBA code as described in section 1.2.2, the following Run times were recorded:
+      After some code modification to the VBA script as described in section 1.3, the following Run times were recorded:
       
   ![image](https://user-images.githubusercontent.com/85843030/124393016-69b46f00-dcc6-11eb-96fd-67580a509f32.png)
   
   ![image](https://user-images.githubusercontent.com/85843030/124393021-71741380-dcc6-11eb-8032-606b42b1a521.png)
 
   
-      As seen the changes to the VBA macro did not make the run any faster, the opposite.
-      there might be other ways of making the macro run faster, however in this instance, the original macro code is 
-      effiecient enough to run the analysis in least time.
+  
+  
+      As seen the changes to the VBA Challenge macro did not make the run any faster, the opposite.
+      The advantage of trying to make the macro run faster is that some codes could be bundled up and the volume of 
+      the code can be somewhat reduced in size.
+      If the macro is changed too much, it might not run, therefore creating mor time to fix any new errors.
+      
+      However, it is a good practice to trying to optimise macros, using more efficient and clear coding practises.
+      Although, sometimes like in this instance, the original macro ran slightly more efficient and faster than the Refactored macro.
+      
+      
+##    The advantages with Refactoring macros:
+      -More efficient and clear coding.
+      -Increase in VBA coding knowledge
+   
+   
+##    The disadvantages:
+      - Time consuming
+      - Errors 
+      - Not necessarily better and faster than original codes
+      
+      
+      
+    
       
       
       
