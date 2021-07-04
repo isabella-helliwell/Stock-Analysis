@@ -215,13 +215,7 @@ The Refactored code can be found in "VBA_Challenge_Refactored.txt" file.
 
       In the initial run, the following run times were recorded for 2017 and 2018;
       
-      ![image](https://user-images.githubusercontent.com/85843030/124392665-06760d00-dcc5-11eb-937d-aff6a6c2f507.png)
-
-
-      ![image](https://user-images.githubusercontent.com/85843030/124392869-acc21280-dcc5-11eb-8a71-8542ee310cb4.png)
-
-      ![image](https://user-images.githubusercontent.com/85843030/124392919-f14dae00-dcc5-11eb-92fd-2c0352e28c5c.png)
-
+      ![image](https://user-images.githubusercontent.com/85843030/124392940-0fb3a980-dcc6-11eb-9e52-09c56f6cf900.png)
 
 
 
