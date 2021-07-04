@@ -136,4 +136,27 @@ Overal, the stocks did much better in 2017 than 2018.
           
 #####   Next j
           -After all the "AY" stocks have been looped through, the j will point to the next ticker, ticker (1), stock "CSIQ"
-          and do the above loop again, where instaed of "AY" stock, it will look at "CSIQ"
+          and do the above loop again, where instead of "AY" stock, it will look at "CSIQ"
+
+
+    The next part of the code is to format the cells. This is done using the following codes:
+    
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A2:C2").Font.Bold = True
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A2:C2").Font.Size = 12
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A2:C2").Borders(xlEdgeBottom).LineStyle = xlContinuous
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A1").Font.Bold = True
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A1").Font.Size = 14
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A2:C2").Font.ColorIndex = 1
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("C:C").numberformat = "0.0%"
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("B:B").numberformat = "#0#"
+##### Sheets("All_Stocks_Analysis" & yearvalue).Columns("B").AutoFit
+
+
+
+rowend = Sheets("all_Stocks_Analysis" & yearvalue).Cells(Rows.Count, "A").End(xlUp).Row
+
+
+
+
+
+
