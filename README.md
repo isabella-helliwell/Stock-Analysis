@@ -236,6 +236,8 @@ The Refactored code can be found in "VBA_Challenge_Refactored.txt" file.
       The advantage of trying to make the macro run faster is that some codes could be bundled up and the volume of 
       the code can be somewhat reduced in size.
       If the macro is changed too much, it might not run, therefore creating mor time to fix any new errors.
+      Furthermore, it was noticed that if running the same macro over and over again the run time could change slightly, 
+      which might be an indication that if there are several applications opened in the background the runtime might change slightly.
       
       However, it is a good practice to trying to optimise macros, using more efficient and clear coding practises.
       Although, sometimes like in this instance, the original macro ran slightly more efficient and faster than the Refactored macro.
