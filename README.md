@@ -139,7 +139,8 @@ Overal, the stocks did much better in 2017 than 2018.
           and do the above loop again, where instead of "AY" stock, it will look at "CSIQ"
 
 
-    The next part of the code is to format the cells. This is done using the following codes:
+
+The next part of the code is to format the cells. This is done using the following codes:
     
 ##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A2:C2").Font.Bold = True
 ##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A2:C2").Font.Size = 12
@@ -152,11 +153,25 @@ Overal, the stocks did much better in 2017 than 2018.
 ##### Sheets("All_Stocks_Analysis" & yearvalue).Columns("B").AutoFit
 
 
+Lastly we will format the yearly returns obtained in our results with a for loop to loop through the cells and highlight any values
+less than 0 red and any values more than 0 with green.
 
-rowend = Sheets("all_Stocks_Analysis" & yearvalue).Cells(Rows.Count, "A").End(xlUp).Row
+##### rowend = Sheets("all_Stocks_Analysis" & yearvalue).Cells(Rows.Count, "A").End(xlUp).Row
+##### For i = 3 To rowend
 
+#####       If Sheets("All_stocks_analysis" & yearvalue).Cells(i, 3).Value < 0 Then
+#####       Sheets("All_Stocks_Analysis" & yearvalue).Cells(i, 3).Interior.Color = vbRed
+        
+#####       Else: Sheets("All_Stocks_Analysis" & yearvalue).Cells(i, 3).Interior.Color = vbGreen
+#####       End If
 
+##### Next i
 
+After the macro has run, the timer will stop recording the time and a message box with how long the run took will appear.
 
+##### Sheets("All_stocks_analysis" & yearvalue).Activate
+#####       endtime = Timer
+##### MsgBox "This code ran in " & (endtime - startTime) & " seconds for the year " & (yearvalue)
 
+##### End Sub
 
