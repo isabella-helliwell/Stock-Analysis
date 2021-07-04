@@ -46,17 +46,72 @@ Overal, the stocks did much better in 2017 than 2018.
       The above code, is declaring some variables using the following format: [DIM variablename AS DATATYPE],
       
 ##### yearvalue = InputBox("What year would you like to run the analysis on")
-      -MessageBox will ask the user to input year for the Stocks to be analysed
+      -MessageBox will ask the user to input year for the Stocks to be analysed and will assign yearvalue the input
+      
 ##### RowCount = Sheets(yearvalue).Cells(Rows.Count, "A").End(xlUp).Row
       - RowCount will open up the Excel tab with the same year as the user year input and select column A,
         and scroll up to the first row with a non blank cell in column A. This will provided how many Rows there is in the sheet opened.
+        
 ##### starttimer = Timer
       -Starts timing the macro
+      
 ##### Worksheets(yearvalue).Activate
       -activates the tab in Excel that the user input year chose in the previous steps
       
-      
-      
+##### Sheets("All_Stocks_Analysis" & yearvalue).Range("A1").Value = "All Stocks " & yearvalue
+##### Sheets("All_Stocks_Analysis" & yearvalue).Cells(2, 1).Value = "Ticker"
+##### Sheets("All_Stocks_Analysis" & yearvalue).Cells(2, 2).Value = "Total Daily Volume"
+##### Sheets("All_Stocks_Analysis" & yearvalue).Cells(2, 3).Value = "Return"   
+      -Predefining some hearders in the appropiate sheet we have chosen to do our analysis in
+ 
+ 
+##### tickers(0) = "AY"
+##### tickers(1) = "CSIQ"
+##### tickers(2) = "DQ"
+##### tickers(3) = "ENPH"
+##### tickers(4) = "FSLR"
+##### tickers(5) = "HASI"
+##### tickers(6) = "JKS"
+##### tickers(7) = "RUN"
+##### tickers(8) = "SEDG"
+##### tickers(9) = "SPWR"
+##### tickers(10) = "TERP"
+##### tickers(11) = "VSLR"
+      -tickers hold the information of each stock name. This is used to loop through each stock by assigning a pointer "j" to them
+     
+##### For j = 0 To 11
+      -the loop starts with the pointer "j" pointing at ticker(0), which is stock "AY"
+##### totalvolume = 0
+##### Ticker = tickers(j)
+      -Ticker is assigned the value in tickers(0), which is "AY"
+
+#####     For i = 2 To RowCount
+            -the loop starts at Row 2, and will loop until Rowcount, which is now known
+
+#####         If Cells(i, 1).Value = Ticker Then
+                  -conditional statement, that says if row 2 in column 1 ="AY",
+            
+#####             totalvolume = totalvolume + Cells(i, 8).Value
+                  -than, totalvolume= previous totalvolume + the value in Row2, Column 8
+
+#####         End If
+                  -end of an If statement
+                  
+                  
+#####         If Cells(i - 1, 1).Value <> Ticker And Cells(i, 1).Value = Ticker Then
+
+ #####            startingPrice = Cells(i, 6).Value
+
+ #####        End If
+
+ #####        If Cells(i + 1, 1).Value <> Ticker And Cells(i, 1).Value = Ticker Then
+
+ #####            endingprice = Cells(i, 6).Value
+
+ #####        End If
+
+#####     Next i
+     
       
       
       
