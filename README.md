@@ -81,7 +81,10 @@ Overal, the stocks did much better in 2017 than 2018.
      
 ##### For j = 0 To 11
       -the loop starts with the pointer "j" pointing at ticker(0), which is stock "AY"
+      
 ##### totalvolume = 0
+      -the total volume will be set to 0 before the next stock is looped through
+      
 ##### Ticker = tickers(j)
       -Ticker is assigned the value in tickers(0), which is "AY"
 
@@ -92,26 +95,45 @@ Overal, the stocks did much better in 2017 than 2018.
                   -conditional statement, that says if row 2 in column 1 ="AY",
             
 #####             totalvolume = totalvolume + Cells(i, 8).Value
-                  -than, totalvolume= previous totalvolume + the value in Row2, Column 8
+                  -then, totalvolume= previous totalvolume + the value in Row2, Column 8
 
 #####         End If
                   -end of an If statement
                   
                   
 #####         If Cells(i - 1, 1).Value <> Ticker And Cells(i, 1).Value = Ticker Then
+                  -conditional statement finding the first value of a stock, "AY" in this run, by checking if the
+                  previous row and the current row do not have the same stock name
+
 
  #####            startingPrice = Cells(i, 6).Value
-
+                  then, the starting price is set to the price in row2, cell 6
+                                 
+                  
  #####        End If
+                  -end of an If statement
+ 
 
  #####        If Cells(i + 1, 1).Value <> Ticker And Cells(i, 1).Value = Ticker Then
+                  -conditional statement checking to see if the next row and this row are different stocks,
+ 
 
  #####            endingprice = Cells(i, 6).Value
+                  then, the endingprice for the current stock is the value in row2, column 6
 
  #####        End If
+                  -end of an If statement
 
 #####     Next i
-     
+            - now, the macro will move to the next Row, in this example, it will check to see if Row3 is also stock "AY"
       
-      
-      
+#####     Sheets("All_Stocks_Analysis" & yearvalue).Cells(3 + j, 1).Value = Ticker
+#####     Sheets("All_Stocks_Analysis" & yearvalue).Cells(3 + j, 2).Value = totalvolume
+#####     Sheets("All_Stocks_Analysis" & yearvalue).Cells(3 + j, 3).Value = endingprice / startingPrice - 1      
+          -After the macro has gone through all the rows containing "AY" Stock, it has finnished its loop, and 
+          the results are put in worksheet and cells
+          
+          
+#####   Next j
+          -After all the "AY" stocks have been looped through, the j will point to the next ticker, ticker (1), stock "CSIQ"
+          and do the above loop again, where instaed of "AY" stock, it will look at "CSIQ"
