@@ -25,4 +25,9 @@ Table2. Yearly return for year 2018
 
 Overal, the stocks did much better in 2017 than 2018.
 ### 1.2 VBA Code
-      The VBA code used for the analysis, is a nested "For" loops were  
+      The overal layout of the VBA code consists of a suberoutine name, and a collection of steps and instructions.
+      The name of the Subroutine is set to "VBA_Challenge", and the instructions given is to calculate the yearly return for stocks.
+      In the first part of the macro, variable declarations are made to assign the correct data types.
+      In the main part of the macro, the actual calculations are carried out utilizing nested foor loops.
+      In the last part of the macro, the results are populated into the appropiate cells and sheets.
+      
