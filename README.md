@@ -33,9 +33,10 @@ Overal, the stocks did much better in 2017 than 2018.
       In the last part of the macro, the results are populated into the appropiate cells and sheets.
       There are also some formatting and macro runtime recorded.
       
-#### 1.2.1 VBA Code Explained
+### 1.2.1 VBA Code Explained
 
-      The following code is used for the first part of the macro:
+The following code is used for the first part of the macro:
+
 ##### Sub VBA_Challenge()
 ##### Dim startTime As Single
 ##### Dim endtime As Single
@@ -64,7 +65,7 @@ Overal, the stocks did much better in 2017 than 2018.
 ##### Sheets("All_Stocks_Analysis" & yearvalue).Cells(2, 3).Value = "Return"   
       -Predefining some hearders in the appropiate sheet we have chosen to do our analysis in
  
- 
+This is the main part of the code where we do our loops:
 ##### tickers(0) = "AY"
 ##### tickers(1) = "CSIQ"
 ##### tickers(2) = "DQ"
@@ -174,4 +175,16 @@ After the macro has run, the timer will stop recording the time and a message bo
 ##### MsgBox "This code ran in " & (endtime - startTime) & " seconds for the year " & (yearvalue)
 
 ##### End Sub
+
+### 1.2.2 VBA Code Refactored
+The purpose of this excersise is to see if we can optimized the running time in the VBA macro that was described in section 1.2.1.
+At first we can look into our VBA code to see if we can make it more clear and clean. Secondly, there might be some other operators,
+logical statements that will collect less memory, and therefore optimize the run time.
+
+
+
+
+
+
+
 
