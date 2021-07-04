@@ -213,7 +213,7 @@ The Refactored code can be found in "VBA_Challenge_Refactored.txt" file.
       
 ####  2.2 VBA Code
 
-      In the initial run, the following run times were recorded for 2017 and 2018;
+      In the initial run, the following Run times were recorded for 2017 and 2018;
       
  ![image](https://user-images.githubusercontent.com/85843030/124392977-412c7500-dcc6-11eb-8965-d21974e6ab83.png)
    
@@ -222,14 +222,16 @@ The Refactored code can be found in "VBA_Challenge_Refactored.txt" file.
  
  
  
-      After some minor modification to the VBA code as described in section 1.2.1, the following Run times were recorded:
+      After some minor modification to the VBA code as described in section 1.2.2, the following Run times were recorded:
       
   ![image](https://user-images.githubusercontent.com/85843030/124393016-69b46f00-dcc6-11eb-96fd-67580a509f32.png)
   
   ![image](https://user-images.githubusercontent.com/85843030/124393021-71741380-dcc6-11eb-8032-606b42b1a521.png)
 
   
-
+      As seen the changes to the VBA macro did not make the run any faster, the opposite.
+      there might be other ways of making the macro run faster, however in this instance, the original macro code is 
+      effiecient enough to run the analysis in least time.
       
       
       
