@@ -241,12 +241,12 @@ The Refactored code can be found in "VBA_Challenge_Refactored.txt" file.
       Although, sometimes like in this instance, the original macro ran slightly more efficient and faster than the Refactored macro.
       
       
-##    The advantages with Refactoring macros:
+##    The Advantages with Refactoring macros:
       -More efficient and clear coding.
       -Increase in VBA coding knowledge
    
    
-##    The disadvantages:
+##    The Disadvantages:
       - Time consuming
       - Errors 
       - Not necessarily better and faster than original codes
