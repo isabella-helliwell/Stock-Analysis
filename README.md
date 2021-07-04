@@ -23,7 +23,7 @@ Table2. Yearly return for year 2018
 
 ![image](https://user-images.githubusercontent.com/85843030/124384801-fea47180-dca0-11eb-861f-8f5bf24c4c5e.png)
 
-Overal, the stocks did much better in 2017 than 2018.
+
 
 ### 1.2 VBA Code
       The overal layout of the VBA code consists of a suberoutine name, and a collection of steps and instructions.
@@ -154,8 +154,8 @@ The next part of the code is to format the cells. This is done using the followi
 ##### Sheets("All_Stocks_Analysis" & yearvalue).Columns("B").AutoFit
 
 
-Lastly we will format the yearly returns obtained in our results with a for loop to loop through the cells and highlight any values
-less than 0 red and any values more than 0 with green.
+      Lastly we will format the yearly returns obtained in our results with a for loop to loop through the cells and highlight 
+      any values less than 0 red and any values more than 0 with green.
 
 ##### rowend = Sheets("all_Stocks_Analysis" & yearvalue).Cells(Rows.Count, "A").End(xlUp).Row
 ##### For i = 3 To rowend
@@ -168,7 +168,7 @@ less than 0 red and any values more than 0 with green.
 
 ##### Next i
 
-After the macro has run, the timer will stop recording the time and a message box with how long the run took will appear.
+      After the macro has run, the timer will stop recording the time and a message box with how long the run took will appear.
 
 ##### Sheets("All_stocks_analysis" & yearvalue).Activate
 #####       endtime = Timer
@@ -177,13 +177,50 @@ After the macro has run, the timer will stop recording the time and a message bo
 ##### End Sub
 
 ### 1.2.2 VBA Code Refactored
-The purpose of this excersise is to see if we can optimized the running time in the VBA macro that was described in section 1.2.1.
-At first we can look into our VBA code to see if we can make it more clear and clean. Secondly, there might be some other operators,
-logical statements that will collect less memory, and therefore optimize the run time.
+      The purpose of this excersise is to see if we can optimized the running time in the VBA macro that was described in section 1.2.1.
+      At first we can look into our VBA code to see if we can make it more clear and clean. Secondly, there might be some other operators,
+      logical statements that will collect less memory, and therefore optimize the run time.
+
+      The changes made to the VBA_Challenge() macro, were a result of looking to https://analysistabs.com/vba/optimize-code-run-macros-faster/ 
+      for any ideas on how to optimize the code. The following codes were added:
+   
+    
+##### Application.ScreenUpdating = False and  Application.ScreenUpdating = True
+      This will stop the screen updating (screen flickering), where you open and close worksheets in your coding
+      
+##### Dim startTime As Single, endtime As Single, startingPrice As Single, endingprice As Single
+      Since, I had a few variables that I wanted to declare as Single, writing them all in the same line, might be better
+      
+      Adding a With statement to my formatting, stops repeating the sheet name and range
+##### With Sheets("All_Stocks_Analysis" & yearvalue).Range("A2:C2")
+##### .Font.Bold = True
+##### .Font.Size = 12
+##### .Borders(xlEdgeBottom).LineStyle = xlContinuous
+##### .Font.ColorIndex = 1
+##### End With
+##### With Sheets("All_Stocks_Analysis" & yearvalue).Range("A1")
+##### .Font.Bold = True
+##### .Font.Size = 14
+##### End With
+
+The Refactored code can be found in "VBA_Challenge_Refactored.txt" file.
 
 
 
+## 2. Results
+####  2.1 Stockmarket
+      As seen in Table1 and Table2, overal the stocks did much better in 2017 than 2018.
+      
+####  2.2 VBA Code
 
+      In the initial run, the following run times were recorded for 2017 and 2018;
+      
+      ![image](https://user-images.githubusercontent.com/85843030/124392665-06760d00-dcc5-11eb-937d-aff6a6c2f507.png)
+
+
+      ![image](https://user-images.githubusercontent.com/85843030/124392869-acc21280-dcc5-11eb-8a71-8542ee310cb4.png)
+
+      
 
 
 
