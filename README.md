@@ -1,4 +1,4 @@
-# VBA_Challenge
+# Stock Analysis
 
 ## 1. Project Scope
       Part1:
